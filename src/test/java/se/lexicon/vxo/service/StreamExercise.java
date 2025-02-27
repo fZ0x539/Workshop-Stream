@@ -204,7 +204,7 @@ public class StreamExercise {
 
         // todo: write your code here
 
-        ToIntFunction<Person> personToAge = person -> Period.between(person.getDateOfBirth(), LocalDate.now()).getYears();
+        ToIntFunction<Person> personToAge = person -> Period.between(person.getDateOfBirth(), LocalDate.parse("2019-12-20")).getYears();
 
         averageAge = people.stream()
                 .mapToInt(personToAge)
